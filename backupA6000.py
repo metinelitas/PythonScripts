@@ -7,7 +7,7 @@ import shutil
 
 
 # cameraPath = "C:\\Users\\metin\\Desktop\\import\\"
-cameraPath = "F:\\"
+cameraPath = "E:\\"
 outputPath = "C:\\Users\\metin\\Desktop\\output\\"
 
 
@@ -53,6 +53,12 @@ def copyImageFiles():
                 imageTakenYear = splittedDateTimeData[0]
                 directoryName = imageTakenYear+"-"+imageTakenMonth+"-"+imageTakenDay
                 copyFileToDirectory(directoryName,fileFullPath)
+                # RAW
+                rawFileName = os.path.join(r, file.split('.')[0] + '.ARW')
+                if (os.path.isfile(rawFileName)):
+                    directoryName = directoryName + '/' + 'RAW'
+                    copyFileToDirectory(directoryName,rawFileName)
+            
 
 
 copyImageFiles()
