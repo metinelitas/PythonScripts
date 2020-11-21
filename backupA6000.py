@@ -1,14 +1,18 @@
 import os
 import time
-import pathlib
+# import pathlib
 import exifread
 import glob
 import shutil
+import os.path
 
 
 # cameraPath = "C:\\Users\\metin\\Desktop\\import\\"
 cameraPath = "E:\\"
 outputPath = "C:\\Users\\metin\\Desktop\\output\\"
+outputPath = "/Users/metinelitas/Foto-Video/A6000"
+cameraPath = "/Volumes/NO NAME"
+
 
 
 def copyFileToDirectory(directoryName,fileName):
